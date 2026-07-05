@@ -1,0 +1,14 @@
+C:\Users\Rahul\Desktop\stellar\contracts\tipjar\target\release\deps\serde-230a302956d9abdc.d: C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\Rahul\Desktop\stellar\contracts\tipjar\target\release\build\serde-2844ea2d730339c8\out/private.rs
+
+C:\Users\Rahul\Desktop\stellar\contracts\tipjar\target\release\deps\libserde-230a302956d9abdc.rlib: C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\Rahul\Desktop\stellar\contracts\tipjar\target\release\build\serde-2844ea2d730339c8\out/private.rs
+
+C:\Users\Rahul\Desktop\stellar\contracts\tipjar\target\release\deps\libserde-230a302956d9abdc.rmeta: C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\Rahul\Desktop\stellar\contracts\tipjar\target\release\build\serde-2844ea2d730339c8\out/private.rs
+
+C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs:
+C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs:
+C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs:
+C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs:
+C:\Users\Rahul\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs:
+C:\Users\Rahul\Desktop\stellar\contracts\tipjar\target\release\build\serde-2844ea2d730339c8\out/private.rs:
+
+# env-dep:OUT_DIR=C:\\Users\\Rahul\\Desktop\\stellar\\contracts\\tipjar\\target\\release\\build\\serde-2844ea2d730339c8\\out
