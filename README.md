@@ -1,141 +1,303 @@
-# StellarPay
+# AstroTip 🚀
 
-StellarPay is a beginner-friendly Stellar Testnet decentralized application (dApp) that allows users to connect their Freighter wallet, view their XLM balance, and send XLM transactions securely on the Stellar Testnet.
+A Level 2 Stellar & Soroban dApp built on the Stellar Testnet using React, Vite, Tailwind CSS, and Soroban Smart Contracts.
 
-The project is built with **React**, **Vite**, and **Tailwind CSS**, styled using a sleek, premium dark-themed glassmorphism interface.
-
-## Features
-
-- **Freighter Wallet Integration**: Connects seamlessly with Freighter extension. Handles auto-reconnects and disconnects.
-- **Dynamic Balance Checking**: Instantly fetches native XLM balances from the Stellar Horizon Testnet.
-- **SDF Friendbot Funding**: Allows new or unfunded testnet accounts to request a 10,000 XLM airdrop with a single click.
-- **Payment Operations**: Build, sign, and submit payments on the Testnet with instant state tracking:
-  - *Preparing transaction*
-  - *Awaiting signature*
-  - *Submitting to Testnet*
-  - *Success* (includes transaction hash and direct Stellar Expert Explorer links)
-  - *Failure* (with rich error logs)
-- **Defensive Error Handling**: Alerts users if Freighter is missing, on the wrong network (e.g., Public instead of Testnet), or if they reject signature prompts.
-- **Tailored CSS Styling**: A responsive, mobile-first design with smooth animation triggers, micro-interactions, and custom loaders.
-
-## Tech Stack
-
-- **Framework**: React + Vite (JavaScript ESM)
-- **Styling**: Tailwind CSS + Custom CSS Variables
-- **Stellar Connection**: `@stellar/stellar-sdk`
-- **Wallet Link**: `@stellar/freighter-api`
-- **Globals Resolving**: `vite-plugin-node-polyfills`
-- **Notifications**: `react-toastify`
-- **Icons**: `lucide-react`
+AstroTip allows users to connect Stellar wallets, view balances, send XLM payments, interact with a deployed Soroban smart contract, and track contract activity in real time through a modern, responsive interface.
 
 ---
 
-## Getting Started
+## 🌐 Live Demo
 
-### 1. Prerequisites (Installing Freighter Wallet)
+**Live Application:**
 
-To interact with StellarPay, you need the official Freighter browser extension:
-1. Visit [freighter.app](https://www.freighter.app/) to download and install the extension for your browser (Chrome, Firefox, Edge, Brave).
-2. Set up your wallet, create a password, and write down your recovery recovery phrase.
-3. **Important**: Configure Freighter for the Stellar Testnet:
-   - Open the Freighter extension.
-   - Click the gear icon (**Settings**) in the top right.
-   - Go to **Preferences**.
-   - Under **Network**, select **Testnet**.
+https://vercel.com/akashhhh
 
 ---
 
-### 2. Run Locally
+## 📹 Demo Video
 
-Follow these steps to run the application on your computer:
+Watch the complete project demonstration:
+
+https://youtu.be/Ia0MADcjq9s?si=aYNvkPQfgWiP49jz
+
+---
+
+## 📂 GitHub Repository
+
+https://github.com/Akash2468jee
+
+---
+
+## ✨ Features
+
+### Multi-Wallet Support
+
+- Freighter Wallet Integration
+- Albedo Wallet Integration
+- Wallet Connect / Disconnect
+- Automatic wallet persistence using localStorage
+
+### Balance Management
+
+- Fetch Stellar Testnet XLM balance
+- Real-time balance updates
+- Friendbot funding support
+
+### XLM Transactions
+
+- Send XLM payments on Stellar Testnet
+- Input validation
+- Success and failure notifications
+- Transaction hash tracking
+
+### Soroban Smart Contract
+
+- Deposit tips into Tip Jar contract
+- Read contract state
+- Real-time contract interaction
+- Event monitoring
+
+### Transaction Status Tracking
+
+Displays transaction stages:
+
+- Preparing
+- Awaiting Signature
+- Submitting
+- Pending Confirmation
+- Confirmed
+- Failed
+
+### Error Handling
+
+Handles multiple error types:
+
+- WalletNotInstalledError
+- UserRejectedTransactionError
+- NetworkError
+- InsufficientBalanceError
+- ContractExecutionError
+
+---
+
+## 🔗 Smart Contract Information
+
+| Item | Value |
+|------|-------|
+| Network | Stellar Testnet |
+| Contract ID | `CBLRC7CFV5OV42B5I2NE7EXCBLC3XTXXH3SPZV4E4VI43IETOSC5BRU5` |
+| Smart Contract | Soroban Tip Jar |
+| Status | Deployed Successfully |
+| Deployment Transaction Hash | `d3f8efcb83b89c92a6b176df7d359c024876b5083da93795bcb6ad459bf1ff52` |
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- React 19
+- Vite
+- Tailwind CSS
+- React Toastify
+
+### Blockchain
+
+- Stellar SDK
+- Soroban Smart Contracts
+- Horizon API
+- Soroban RPC
+
+### Wallets
+
+- Freighter Wallet
+- Albedo Wallet
+
+### Deployment
+
+- GitHub
+- Vercel
+- GitHub Actions
+
+---
+
+## 📁 Project Structure
+
+```text
+contracts/
+└── tipjar/
+
+src/
+├── components/
+├── config/
+├── contracts/
+├── events/
+├── services/
+├── utils/
+├── wallets/
+
+README.md
+package.json
+```
+
+---
+
+## 🚀 Installation & Setup
+
+### Clone Repository
 
 ```bash
-# Clone the repository (or navigate to the project folder)
-cd stellar
+git clone https://github.com/Akash2468jee/AstroTip.git
+cd AstroTip
+```
 
-# Install dependencies
+> **Note:** Replace `AstroTip` with your actual repository name if it's different.
+
+### Install Dependencies
+
+```bash
 npm install
+```
 
-# Run the local development server
+### Run Development Server
+
+```bash
 npm run dev
 ```
 
-The app will start at `http://localhost:5173`. Open this URL in your web browser.
-
----
-
-### 3. Funding Your Account
-
-Stellar accounts must be initialized on-chain by funding them with a minimum reserve (usually 1 XLM or more). Since this dApp uses the **Testnet**, you can fund your account for free:
-- **Option A (In-App)**: Simply connect your Freighter wallet to StellarPay. If your account is unfunded, a banner will appear with a **"Fund with Friendbot (10k XLM)"** button. Click it to fund your account instantly.
-- **Option B (Manual)**: Copy your public key, go to the [Stellar Laboratory Friendbot](https://laboratory.stellar.org/#account-creator?network=testnet), paste your public address, and submit the form to receive 10,000 Testnet XLM.
-
----
-
-## Folder Structure
+Application runs at:
 
 ```text
-src/
-├── components/
-│   ├── Navbar.jsx              # App brand, connection state, toggle buttons
-│   ├── WalletCard.jsx          # Extension checker, address copy, preferences
-│   ├── BalanceCard.jsx         # XLM balance, manual refresh, Friendbot handler
-│   ├── SendPayment.jsx         # Payment form with inputs and validation checks
-│   ├── TransactionResult.jsx   # Interactive step trackers, success/failure screens
-│   └── Loader.jsx              # Reusable spinners and balance load skeletons
-├── services/
-│   └── stellar.js              # Stellar SDK and Freighter API client logic
-├── utils/
-│   └── validators.js           # Public key pattern and balance amount validators
-├── App.jsx                     # Central React state coordinator
-├── main.jsx                    # React index DOM mount
-└── index.css                   # Tailwind imports and glass theme overrides
+http://localhost:5173
 ```
 
 ---
 
-## Deployment to Vercel
+## 🧪 Build Project
 
-Prepare the project for production deployment on Vercel:
-
-1. **Production Build Check**:
-   Before deploying, verify that the project builds without errors:
-   ```bash
-   npm run build
-   ```
-   This will output a production bundle in the `dist/` directory.
-
-2. **Deploy via Vercel CLI**:
-   Ensure you have the Vercel CLI installed:
-   ```bash
-   npm install -g vercel
-   vercel
-   ```
-   Follow the CLI prompts to deploy.
-
-3. **Deploy via Vercel Dashboard (Recommended)**:
-   - Push your code to a GitHub repository.
-   - Import your repository on the [Vercel Dashboard](https://vercel.com).
-   - Vercel will auto-detect **Vite** as the framework.
-   - Set the Build Command to `npm run build` and Output Directory to `dist`.
-   - Click **Deploy**.
+```bash
+npm run build
+```
 
 ---
 
-## Screenshot Placeholders
+## 📸 Screenshots
 
-*Include screenshots or GIFs here once live:*
-- `[Screenshot - Connect Wallet Dashboard]`
-- `[Screenshot - Transaction Progress Tracking]`
-- `[Screenshot - Success Screen and Explorer link]`
+### Home Dashboard
+
+![Home Dashboard](screenshots/front.png)
+
+### Wallet Connection
+
+![Wallet Connection](screenshots/wallet.png)
+
+### Connected Wallet & Balance
+
+![Connected Wallet](screenshots/connected.png)
+
+### Transaction Success
+
+![Transaction Success](screenshots/trans4.png)
+
+### Mobile Responsive View
+
+![Mobile Responsive View](screenshots/mobile.jpeg)
 
 ---
 
-## Submission Checklist
+## ⚙️ Soroban Contract Deployment
 
-- [x] Freighter wallet connection configured
-- [x] Horizon Server connected to `https://horizon-testnet.stellar.org`
-- [x] LocalStorage session persistence implemented
-- [x] Validation checks for recipient addresses and available funds
-- [x] Real-time transaction stage logger
-- [x] Responsive layout with custom dark glassmorphic styling
+### Build Contract
+
+```bash
+stellar contract build
+```
+
+### Deploy Contract
+
+```bash
+stellar contract deploy \
+--wasm target/wasm32v1-none/release/soroban_tipjar_contract.wasm \
+--source deployer \
+--network testnet
+```
+
+### Contract ID
+
+```text
+CBLRC7CFV5OV42B5I2NE7EXCBLC3XTXXH3SPZV4E4VI43IETOSC5BRU5
+```
+
+---
+
+## 🔄 CI/CD
+
+GitHub Actions automatically:
+
+- Install dependencies
+- Run validation checks
+- Build project
+- Verify deployment readiness
+
+Workflow file:
+
+```text
+.github/workflows/ci.yml
+```
+
+---
+
+## ✅ Level 2 Requirements Completed
+
+- Wallet Connect Functionality
+- Wallet Disconnect Functionality
+- Freighter Integration
+- Albedo Integration
+- Multi-Wallet Support
+- Balance Fetching
+- XLM Transaction Support
+- Contract Deployed on Testnet
+- Frontend Contract Interaction
+- Real-Time Event Integration
+- Transaction Status Tracking
+- Error Handling
+- Mobile Responsive UI
+- Public GitHub Repository
+- GitHub Actions CI/CD
+- Vercel Deployment
+- README Documentation
+- Demo Video
+
+---
+
+## 📈 Git Commit History
+
+- feat: add multi-wallet support with Freighter and Albedo integration
+- feat: implement Soroban tip jar contract and frontend contract interactions
+- feat: add real-time event subscriptions and transaction status tracking
+- refactor: improve error handling, UI polish, and production readiness
+- feat: complete AstroTip Level 2 project
+
+---
+
+## 🔗 Useful Links
+
+### Stellar Documentation
+
+https://developers.stellar.org/
+
+### Soroban Documentation
+
+https://soroban.stellar.org/
+
+### Stellar Expert Explorer
+
+https://stellar.expert
+
+---
+
+## 👨‍💻 Developer
+
+**Akash Banerjee**
+
+Built as part of the Stellar Developer Program Level 2 Challenge using Stellar, Soroban, React, and Vercel.
